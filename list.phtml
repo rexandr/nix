@@ -1,0 +1,12 @@
+<?php
+namespace frontend\view\product;
+
+foreach ($data as $row){
+    echo '<h1>'.$row['Name'].'</h1>';
+    echo '<h3>'.'Price - '.$row['Price'].'</h3>';
+    echo '<h6>'.'Description - '.$row['Description'].'</h6>';
+    echo '<img class="img" src='.$row['Image'].' width="50" height="50"'.'>';
+    echo '<a href="/product/view/id/'.$row['Id'].'"> More </a>';
+    echo '<hr size="3">';
+
+}
