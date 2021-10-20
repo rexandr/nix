@@ -104,3 +104,33 @@ if ($_POST['client']&&$_POST['phone']&&$_POST['delivery']&&$_POST['del_address']
     <input type="submit" name="submit" value="Submit">
     <input type="reset" name="reset" value="RESET">
 </form>
+
+
+
+<?php
+echo '<h3>Task 5 File upload </h3>';
+
+$valid = ['png', 'jpg', 'pdf', 'xls', 'doc', 'xlsx', 'docx'];
+
+if (isset($_FILES['up_file'])){
+    if (is_uploaded_file($_FILES['up_file']['tmp_name'])){
+        $filename = basename($_FILES['up_file']['name'], 1+strrpos($_FILES['up_file']['name'],"."));
+    }
+    elseif (!in_array($valid)){
+        echo 'Please, choose an another type\'s file!';
+    }else{
+        echo 'Something is wrong!';
+    }
+}else{
+    print_r($_FILES);
+    echo 'Please, select a file!';
+}
+
+?>
+
+<form name="task5" action="<?=$_SERVER['PHP_SELF']?>" enctype="multipart/form-data" method="post">
+    <input type="file" name="up_file">
+    <br>
+    <input type="submit" name="submit" value="Submit">
+    <input type="reset" name="reset" value="RESET">
+</form>
