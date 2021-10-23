@@ -18,7 +18,6 @@ $reverse = [];
 $i--;
 
 while (!empty($arr[$i])) {
-    echo $i;
     $reverse[] = $arr[$i];
     $i--;
 }
@@ -39,14 +38,11 @@ do {
     $i++;
 } while (!empty($arr[$i]));
 
-echo $i . '<br>';
-
 $reverse = [];
 
 $i--;
 
 do {
-    echo $i;
     $reverse[] = $arr[$i];
     $i--;
 } while (!empty($arr[$i]));
@@ -66,8 +62,6 @@ $i = 0;
 for ($j = 0; $arr[$i] != null; $j++) {
     $i++;
 }
-
-echo $i . ' - ' . $j . '<br>';
 
 $reverse = [];
 
@@ -94,8 +88,6 @@ $i = 0;
 foreach ($arr as $value) {
     $i++;
 }
-
-echo $i . '<br>';
 
 $reverse = [];
 
@@ -130,7 +122,6 @@ $reverse = [];
 $i--;
 
 while (!empty($arr[$i])) {
-    echo $i;
     $reverse[] = $arr[$i];
     $i--;
 }
@@ -151,14 +142,11 @@ do {
     $i++;
 } while (!empty($arr[$i]));
 
-echo $i . '<br>';
-
 $reverse = [];
 
 $i--;
 
 do {
-    echo $i;
     $reverse[] = $arr[$i];
     $i--;
 } while (!empty($arr[$i]));
@@ -177,8 +165,6 @@ $i = 0;
 for ($j = 0; $arr[$i] != null; $j++) {
     $i++;
 }
-
-echo $i . ' - ' . $j . '<br>';
 
 $reverse = [];
 
@@ -205,8 +191,6 @@ $i = 0;
 foreach ($arr as $value) {
     $i++;
 }
-
-echo $i . '<br>';
 
 $reverse = [];
 
@@ -242,10 +226,7 @@ $i--;
 
 while (!empty($arr[$i]) && $i >= 0) {
     $reverse .= $arr[$i];
-    echo $i . ' - ';
     $i--;
-    echo $i;
-
 }
 
 echo $reverse;
@@ -259,8 +240,6 @@ $i = 0;
 do {
     $i++;
 } while (!empty($arr[$i]));
-
-echo $i . '<br>';
 
 $reverse = '';
 
@@ -281,8 +260,6 @@ $i = 0;
 for ($j = 0; $arr[$i] != null; $j++) {
     $i++;
 }
-
-echo $i . ' - ' . $j . '<br>';
 
 $reverse = '';
 
@@ -661,8 +638,6 @@ do {
     $i++;
 } while (!empty($arr[$i]));
 
-echo $i . '<br>';
-
 $reverse = '';
 
 $i--;
@@ -682,8 +657,6 @@ $i = 0;
 for ($j = 0; $arr[$i] != null; $j++) {
     $i++;
 }
-
-echo $i . ' - ' . $j . '<br>';
 
 $reverse = '';
 
@@ -731,69 +704,6 @@ $arr = [44, 12, 11, 7, 1, 99, 43, 5, 69];
 echo '<pre>';
 print_r($arr);
 echo '</pre>';
-
-//while ((($arr[$i])<($arr[++$i])||(!empty($arr[$i])))) {
-//    $arr[$i]=$arr[--$i];
-//    $i++;
-//}
-
-
-//while ((!empty($arr[$i]))){
-//    while ((!empty($arr[$j]))){
-//        $a = $arr[$i];
-//        $b = $arr[$j];
-//        if ($a<$b){
-//            $arr[$i] = $b;
-//            $arr[$j] = $a;
-//        }
-//        $j++;
-//    }
-//    $i++;
-//}
-
-
-//while ((!empty($arr[$i]))){
-//    $j=$i++;
-//    while ((!empty($arr[$j]))){
-//        if ($arr[$i]>$arr[$j]){
-//            $array[$i] = $arr[$i];
-//        }else{
-//            $array[$i] = $arr[$j];
-//        }
-//        $j++;
-//    }
-//    $i++;
-//}
-
-
-//while ((!empty($arr[$i]))){
-//    echo '<br>';
-//    echo 'while1 i = '.$i.'- j = '.$j;
-//    $j=$i++;
-//    while ((!empty($arr[$j]))){
-//        echo '<br>';
-//        echo 'while2 i = '.$i.'- j = '.$j;
-//        if ($arr[$i]>$arr[$j]){
-//            $array[$i] = $arr[$i];
-//        }else{
-//            $array[$i] = $arr[$j];
-//        }
-//        echo '<br>';
-//        echo 'array i = '.$array[$i].'- array j = '.$arr[$j];
-//        echo '<br>';
-//        echo 'if i = '.$i.'- j = '.$j;
-//        $j++;
-//        echo '<br>';
-//        echo 'j++ i = '.$i.'- j = '.$j;
-//        echo '<br>';
-//        echo '-----------------------------------------------';
-//    }
-//    echo '<br>';
-//    echo 'while 1 after while 2 i = '.$i.'- j = '.$j;
-//    $i++;
-//    echo '<br>';
-//    echo 'i++ i = '.$i.'- j = '.$j;
-//}
 
 $i = 0;
 
@@ -884,95 +794,12 @@ echo '<pre>';
 print_r($arr);
 echo '</pre>';
 
-//$i = 0;
-//
-//foreach ($arr as $value) {
-//
-//    $j = 0;
-//
-//    foreach ($arr as $key=>$next) {
-//        echo '$j = '.$j.'<br>';
-//        echo '$i = '.$i.'<br>';
-//        if ($j<$i){
-//            echo '<pre>';
-//            print_r($arr);
-//            echo '</pre>';
-//            die();
-//            continue;
-//        }
-
-
-
-
-
-//        if ($j<=$i){
-//            $j++;
-//            continue;
-//        }
-
-//        for ($j=0;$j<$i;$j++){
-//            continue;
-//        }
-
-//        if ($arr[$i]==$b){
-//            continue;
-//        }
-
-//        $a = $value;
-//        echo '$a = '.$a.'<br>';
-//        $b = $next;
-//        echo '$b = '.$b.'<br>';
-
-
-
-
-//        if ($value < $next) {
-//
-//            $arr[$i] = $next;
-//            echo '$arr[$i] = '.$next.'<br>';
-//            $arr[$j] = $value;
-//            echo '$arr[$j] = '.$value.'<br>';
-//
-//        }
-//
-//        $j++;
-//
-//    }
-//
-//   $i++;
-//}
-
-
-
-//_______________________________________FROM TO HI )))))) Will try more))))
-//$i=0;
-//foreach ($arr as $array){
-//    $j=0;
-//    foreach ($arr as $next) {
-//
-//        if ($j>$i){
-//            continue;
-//        }
-//        if ($arr[$i] < $next) {
-//            $arr[$j] = $arr[$i];
-//            $arr[$i] = $next;
-//
-//        }else{
-//            $arr[0] = $arr[0];
-//        }
-//
-//        $j++;
-//    }
-//    $i++;
-//}
-
-
-$i=0;
-foreach ($arr as $array){
-    $j=0;
+$i = 0;
+foreach ($arr as $array) {
+    $j = 0;
     foreach ($arr as $next) {
 
-        if ($j<$i){
+        if ($j < $i) {
             $j++;
             continue;
         }

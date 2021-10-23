@@ -35,17 +35,6 @@ if ($_POST['id'] && $_POST['count']) {
 } else {
     echo 'Please, make your choice!';
 }
-//if (!empty($_SESSION['cart'])&&isset($_POST['submit'])){
-//    $push = $_SESSION['cart'];
-//    array_push($push, $_POST);
-//    $_SESSION['cart'] = $push;
-//}else{
-//    $_SESSION['cart'] = $_POST;
-//}
-
-//echo '<pre>';
-//print_r($_SESSION);
-//echo '</pre>';
 
 ?>
 

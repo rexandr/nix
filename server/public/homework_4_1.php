@@ -2,30 +2,7 @@
 echo '<h1>Homework 4_1</h1><br>';
 echo '<a href="index.php">Home</a>';
 echo '<h3>Task 1 Prime numbers</h3><br>';
-//for ($i = 1; $i < 100; $i++) {
-//    if ($i == 1 || $i == 2 ||3$i == 5 ||$i == 7 || $i % 2 !== 0) {
-//        if ($i % 3) {
-//            if ($i % 5) {
-//                if ($i % 7) {
-//                    echo $i . '<br>';
-//                }
-//            }
-//        }
-//    }
-//}
 
-//for ($i = 1; $i < 100; $i++) {
-//    if ($i == 1 || $i == 2 ||$i == 5 ||$i == 7 || $i % 2 !== 0) {
-//        echo $i.'<br>';
-//    }elseif ($i % 3) {
-//        echo $i.'<br>';
-//    }elseif ($i % 5){
-//        echo $i.'<br>';
-//    }elseif ($i % 7){
-//        echo $i.'<br>';
-//    }
-//
-//}
 if (isset($_POST['to']) && isset($_POST['from']) && ($_POST['from'] < $_POST['to'])) {
     for ($i = $_POST['from']; $i < $_POST['to']; $i++) {
         if ($i == 2 || $i == 3 || $i == 5 || $i == 7) {
@@ -66,7 +43,8 @@ if (isset($_POST['to']) && isset($_POST['from']) && ($_POST['from'] < $_POST['to
 echo '<h3>Task 2 Counting even numbers in 100 random numbers </h3><br>';
 
 
-if (isset($_POST['to1']) && isset($_POST['from1']) && ($_POST['from1'] < $_POST['to1']) && (($_POST['to1'] - $_POST['from1']) >= 100)) {
+if (isset($_POST['to1']) && isset($_POST['from1']) && ($_POST['from1'] < $_POST['to1'])
+    && (($_POST['to1'] - $_POST['from1']) >= 100)) {
     $j = 0;
     $arr = [];
     for ($i = 0; $i <= $_POST['count1']; $i++) {
@@ -108,28 +86,6 @@ if (isset($_POST['to1']) && isset($_POST['from1']) && ($_POST['from1'] < $_POST[
 <?php
 echo '<h3>Task 3 Counting number\'s matching while random generation is running </h3><br>';
 
-
-//if (isset($_POST['to2']) && isset($_POST['from2']) && ($_POST['from2'] < $_POST['to2'])) {
-//    $arr = [];
-//    for ($a = $_POST['from2']; $a<=$_POST['to2']; $a++){
-//        $arr[]=$a;
-//    }
-//    print_r($arr);
-//    for ($i = 0; $i <= $_POST['count2']; $i++) {
-//        $rand = mt_rand($_POST['from2'], $_POST['to2']);
-//        $pos = array_search($rand, $arr);
-//        $next = $arr[$pos];
-//        array_push($next, '1');
-//        $arr[$pos][] = $next;
-//        echo $pos.' - '.$arr[$pos].' - '.'<br>';
-//    }
-//    echo '<pre>';
-//    print_r($arr);
-//    echo '</pre>';
-//} else {
-//    echo 'Please choose a correct range!';
-//}
-
 if (isset($_POST['to2']) && isset($_POST['from2']) && ($_POST['from2'] < $_POST['to2'])) {
     $arr = [];
 
@@ -147,9 +103,6 @@ if (isset($_POST['to2']) && isset($_POST['from2']) && ($_POST['from2'] < $_POST[
         }
         echo "$a has matched $j times!<br>";
     }
-//    echo '<pre>';
-//    print_r($arr);
-//    echo '</pre>';
 } else {
     echo 'Please choose a correct range!';
 }
