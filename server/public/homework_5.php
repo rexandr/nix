@@ -252,12 +252,13 @@ function findMinMax($one, $two, $three)
 
 }
 
-findMinMax(1,2,3);
+findMinMax(1, 2, 3);
 
 echo "Task11 -----------------------------------------------------------------------------<br>";
 
-function countSquare($length, $width){
-    $square = $length*$width;
+function countSquare($length, $width)
+{
+    $square = $length * $width;
     echo "The square = $square<br>";
     return true;
 }
@@ -267,8 +268,9 @@ countSquare(40, 60);
 
 echo "Task12 -----------------------------------------------------------------------------<br>";
 
-function countPythagorasTheory($katet1, $katet2){
-    $gipo = sqrt(pow($katet1,2)+pow($katet2,2));
+function countPythagorasTheory($katet1, $katet2)
+{
+    $gipo = sqrt($katet1 ** 2 + $katet2 ** 2);
     echo "Hypotenuse = $gipo<br>";
     return true;
 }
@@ -278,8 +280,9 @@ countPythagorasTheory(2, 3);
 
 echo "Task13 -----------------------------------------------------------------------------<br>";
 
-function countPerimeter($length, $width){
-    $perimeter = ($length*2) + ($width * 2);
+function countPerimeter($length, $width)
+{
+    $perimeter = ($length * 2) + ($width * 2);
     echo "The perimeter = $perimeter<br>";
     return true;
 }
@@ -287,23 +290,24 @@ function countPerimeter($length, $width){
 countPerimeter(40, 60);
 
 
-
 echo "Task14 -----------------------------------------------------------------------------<br>";
 
-function countDeskriminant(){
-    $desk = '';
-    echo "The deskriminant = $desk<br>";
+function countDiscriminant($b, $a, $c)
+{
+    $disc = ($b ** 2) - (4 * $a * $c);
+    echo "The discriminant = $disc<br>";
     return true;
 }
 
-countDeskriminant();
+countDiscriminant(4, 5, 6);
 
 
 echo "Task15 -----------------------------------------------------------------------------<br>";
 
-function fillWithEvenNumbers(){
-    for ($i=0;$i<100;$i++){
-        if ($i%2==0){
+function fillWithEvenNumbers()
+{
+    for ($i = 0; $i < 100; $i++) {
+        if ($i % 2 == 0) {
             echo "$i<br>";
         }
     }
@@ -315,9 +319,10 @@ fillWithEvenNumbers();
 
 echo "Task16 -----------------------------------------------------------------------------<br>";
 
-function fillWithOddNumbers(){
-    for ($i=0;$i<100;$i++){
-        if ($i%2!=0){
+function fillWithOddNumbers()
+{
+    for ($i = 0; $i < 100; $i++) {
+        if ($i % 2 != 0) {
             echo "$i<br>";
         }
     }
@@ -325,3 +330,92 @@ function fillWithOddNumbers(){
 }
 
 fillWithOddNumbers();
+
+
+echo "Task17 -----------------------------------------------------------------------------<br>";
+
+function countNumberInDegree($number = 2, $degree = 3)
+{
+    $deg = $number;
+    for ($i = 1; $i < $degree; $i++) {
+        $number *= $deg;
+    }
+    echo "Number in degree = $number<br>";
+
+    return true;
+}
+
+countNumberInDegree();
+
+echo "Task18 -----------------------------------------------------------------------------<br>";
+
+function showSortedArray($arr, $sort = 'asc'){
+    if ($sort!='asc'){
+        $i = 0;
+        foreach ($arr as $array) {
+            $j = 0;
+            foreach ($arr as $next) {
+
+                if ($j < $i) {
+                    $j++;
+                    continue;
+                }
+                if ($arr[$i] < $next) {
+                    $arr[$j] = $arr[$i];
+                    $arr[$i] = $next;
+                }
+
+                $j++;
+            }
+            $i++;
+        }
+    }else{
+        $i = 0;
+        foreach ($arr as $array) {
+            $j = 0;
+            foreach ($arr as $next) {
+
+                if ($j > $i) {
+                   // $j++;
+                    continue;
+                }
+                if ($arr[$i] < $next) {
+                    $arr[$j] = $arr[$i];
+                    $arr[$i] = $next;
+                }
+
+                $j++;
+            }
+            $i++;
+        }
+    }
+    
+    echo '<pre>';
+    print_r($arr);
+    echo '</pre>';
+}
+
+showSortedArray([44, 12, 11, 7, 1, 99, 43, 5, 69], 'desc');
+
+
+
+echo "Task19 -----------------------------------------------------------------------------<br>";
+
+function findInArray($array, $find){
+    foreach ($array as $arr){
+        if ($arr==$find){
+            echo "$find has found!";
+            $found = true;
+        }
+    }
+
+    if ($found){
+    return true;
+    }else{
+        echo "$find hasn't found!";
+        return  true;
+    }
+}
+
+
+findInArray([23,54,4,765,57], 5);
