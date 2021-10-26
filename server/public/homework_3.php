@@ -87,7 +87,7 @@ if ($_POST['client'] && $_POST['phone'] && $_POST['delivery'] && $_POST['del_add
     <br>
     <input type="text" name="delivery" value="Post">
     <br>
-    <input type="tel" name="del_address" value="Magadan str. 5">
+    <input type="text" name="del_address" value="Magadan str. 5">
     <br>
     <input type="submit" name="submit" value="Submit">
     <input type="reset" name="reset" value="RESET">
