@@ -6,6 +6,9 @@
     <a href="homework_4_2.php">Homework_4_2</a>
     <br>
     <a href="homework_5.php">Homework_5</a>
+    <br>
+    <a href="homework_6.php">Homework_6</a>
+
 </form>
 <?php
 include_once 'form.php';
@@ -23,4 +26,7 @@ if (!empty($_POST['number']) && !empty($_POST['from']) && !empty($_POST['to']) &
 } else {
     echo 'Type a correct data!';
 }
+
 ?>
+
+
