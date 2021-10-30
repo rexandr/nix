@@ -14,7 +14,7 @@ function countDir($arr)
 //    }
 //    echo $i;
 
-    foreach ($arr as $item){
+    foreach ($arr as $item) {
         for ($j = 0; isset($item[$j]); $j++)
             if ($item[$j] == "/") {
                 $i++;
@@ -24,7 +24,7 @@ function countDir($arr)
     return $i;
 }
 
-echo countDir(["C:/Prof/dgfsd/sdfgsdf/some.txt", "/sdf/asdf","C:/dir/der/weuuy.pdf"]);
+echo countDir(["C:/Prof/dgfsd/sdfgsdf/some.txt", "/sdf/asdf", "C:/dir/der/weuuy.pdf"]);
 
 echo "<br>";
 echo '-----------------------------------------------------------------';
@@ -45,24 +45,37 @@ echo "<br>";
 echo '-----------------------------------------------------------------';
 echo "<br>";
 
+
 function findSamAndFrodo($arr)
 {
+//    for ($i = 0; isset($arr[$i]); $i++) {
+//        $j = $i + 1;
+//
+//        if ((($arr[$i] == "Sam") && ($arr[$j] == "Frodo")) || (($arr[$i] == "Frodo") && ($arr[$j] == "Sam"))) {
+//            echo "true<br>";
+//            break;
+//        } else {
+//            echo "false<br>";
+//        }
+//    }
     for ($i = 0; isset($arr[$i]); $i++) {
         $j = $i + 1;
-        if ((($arr[$i] == "Sam") && ($arr[$j] == "Frodo")) || (($arr[$i] == "Frodo") && ($arr[$j] == "Sam"))) {
-            echo "true<br>";
-            break;
-        } else {
-            echo "false<br>";
+        $a = $i - 1;
+        if (($arr[$i] == "Sam") && (($arr[$j] == "Frodo") || ($arr[$a] == "Frodo"))) {
+            return true;
         }
     }
 }
 
-echo findSamAndFrodo(["Sam", "Frodo", "Troll", "Balrog", "Human"]);
+
+$r = findSamAndFrodo(["Sam", "Frodo", "Troll", "Balrog", "Human"]) ? "true" : "false";
+echo $r;
 echo "<br>";
-echo findSamAndFrodo(["Orc", "Frodo", "Treant", "Saruman", "Sam"]);
+$r = findSamAndFrodo(["Orc", "Frodo", "Treant", "Saruman", "Sam"]) ? "true" : "false";
+echo $r;
 echo "<br>";
-echo findSamAndFrodo(["Orc", "Sam", "Frodo", "Gandalf", "Legolas"]);
+$r = findSamAndFrodo(["Orc", "Sam", "Frodo", "Gandalf", "Legolas"]) ? "true" : "false";
+echo $r;
 echo "<br>";
 
 echo "<br>";
@@ -93,13 +106,13 @@ function findSecondMax($arr)
     return ($arr[1]);
 }
 
-echo findSecondMax([1,2,3]);
+echo findSecondMax([1, 2, 3]);
 echo "<br>";
-echo findSecondMax([1,-2,3]);
+echo findSecondMax([1, -2, 3]);
 echo "<br>";
-echo findSecondMax([0,0,10]);
+echo findSecondMax([0, 0, 10]);
 echo "<br>";
-echo findSecondMax([-1,-2,-3]);
+echo findSecondMax([-1, -2, -3]);
 echo "<br>";
 
 echo "<br>";
