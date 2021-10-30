@@ -8,6 +8,8 @@
     <a href="homework_5.php">Homework_5</a>
     <br>
     <a href="homework_6.php">Homework_6</a>
+    <br>
+    <a href="control 1.php">Control 1</a>
 
 </form>
 <?php
