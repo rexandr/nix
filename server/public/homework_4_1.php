@@ -21,25 +21,8 @@ if (isset($_POST['to']) && isset($_POST['from']) && ($_POST['from'] < $_POST['to
     echo 'Please choose a correct range!';
 }
 
-?>
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    FROM: <input type="text" name="from" value="0">
-    <br>
-    TO: <input type="text" name="to" value="100">
-    <br>
-    <input type="submit" name="submit" value="Submit">
-    <input type="reset" name="reset" value="Reset">
-</form>
+include './forms/hw_4_1_1.html';
 
-
-//--------------------------------------------------------------------------------------------------------------------//
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    <input type="submit" name="reset" value="RESET WHOLE FORM">
-</form>
-//--------------------------------------------------------------------------------------------------------------------//
-
-
-<?php
 echo '<h3>Task 2 Counting even numbers in 100 random numbers </h3><br>';
 
 
@@ -56,34 +39,13 @@ if (isset($_POST['to1']) && isset($_POST['from1']) && ($_POST['from1'] < $_POST[
     }
     echo $j;
     sort($arr);
-    echo '<pre>';
-    print_r($arr);
-    echo '</pre>';
+    dd($arr);
 } else {
     echo 'Please choose a correct range!';
 }
 
-?>
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    FROM: <input type="text" name="from1" value="0">
-    <br>
-    TO: <input type="text" name="to1" value="100">
-    <br>
-    COUNT: <input type="text" name="count1" value="100">
-    <br>
-    <input type="submit" name="submit" value="Submit">
-    <input type="reset" name="reset" value="Reset">
-</form>
+include './forms/hw_4_1_2.html';
 
-
-//--------------------------------------------------------------------------------------------------------------------//
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    <input type="submit" name="reset" value="RESET WHOLE FORM">
-</form>
-//--------------------------------------------------------------------------------------------------------------------//
-
-
-<?php
 echo '<h3>Task 3 Counting number\'s matching while random generation is running </h3><br>';
 
 if (isset($_POST['to2']) && isset($_POST['from2']) && ($_POST['from2'] < $_POST['to2'])) {
@@ -101,33 +63,14 @@ if (isset($_POST['to2']) && isset($_POST['from2']) && ($_POST['from2'] < $_POST[
                 $j++;
             }
         }
-        echo "$a has matched $j times!<br>";
+        echo $a . 'has matched ' . $j . ' times!<br>';
     }
 } else {
     echo 'Please choose a correct range!';
 }
 
-?>
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    FROM: <input type="text" name="from2" value="1">
-    <br>
-    TO: <input type="text" name="to2" value="5">
-    <br>
-    COUNT: <input type="text" name="count2" value="100">
-    <br>
-    <input type="submit" name="submit" value="Submit">
-    <input type="reset" name="reset" value="Reset">
-</form>
+include './forms/hw_4_1_3.html';
 
-
-//--------------------------------------------------------------------------------------------------------------------//
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    <input type="submit" name="reset" value="RESET WHOLE FORM">
-</form>
-//--------------------------------------------------------------------------------------------------------------------//
-
-
-<?php
 echo '<h3>Task 4 Table columns*rows size with different background. </h3><br>';
 
 
@@ -146,29 +89,13 @@ if (isset($_POST['col']) && isset($_POST['row'])) {
         }
         echo '</tr>';
     }
-    echo "</table>";
+    echo '</table>';
 } else {
     echo 'Please choose a correct range!';
 }
 
-?>
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    COLUMNS: <input type="text" name="row" value="5">
-    <br>
-    ROWS : <input type="text" name="col" value="3">
-    <br>
-    <input type="submit" name="submit" value="Submit">
-    <input type="reset" name="reset" value="Reset">
-</form>
+include './forms/hw_4_1_4.html';
 
-
-//--------------------------------------------------------------------------------------------------------------------//
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    <input type="submit" name="reset" value="RESET WHOLE FORM">
-</form>
-//--------------------------------------------------------------------------------------------------------------------//
-
-<?php
 echo '<h3>Task 5 What is the season. </h3><br>';
 
 $month = mt_rand(1, 12);
@@ -182,21 +109,8 @@ if ($month == 1 || $month == 2 || $month == 12) {
     echo $month . ' - It is autumn!';
 }
 
-?>
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    <input type="submit" name="submit" value="Boogy woogy">
-    <input type="reset" name="reset" value="Reset">
-</form>
+include './forms/hw_4_1_5.html';
 
-
-//--------------------------------------------------------------------------------------------------------------------//
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    <input type="submit" name="reset" value="RESET WHOLE FORM">
-</form>
-//--------------------------------------------------------------------------------------------------------------------//
-
-
-<?php
 echo '<h3>Task 6 What is the first symbol? </h3><br>';
 
 
@@ -210,26 +124,8 @@ if (isset($_POST['symbol']) && isset($_POST['find']) && isset($_POST['position']
     echo 'Please enter a correct data!';
 }
 
-?>
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    SYMBOLS: <input type="text" name="symbol" value="drgerge">
-    <br>
-    FIND : <input type="text" name="find" value="r">
-    <br>
-    POSITION : <input type="text" name="position" value="2">
-    <br>
-    <input type="submit" name="submit" value="Submit">
-    <input type="reset" name="reset" value="Reset">
-</form>
+include './forms/hw_4_1_6.html';
 
-
-//--------------------------------------------------------------------------------------------------------------------//
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    <input type="submit" name="reset" value="RESET WHOLE FORM">
-</form>
-//--------------------------------------------------------------------------------------------------------------------//
-
-<?php
 echo '<h3>Task 7 What is the first number? </h3><br>';
 
 
@@ -245,106 +141,49 @@ if (isset($_POST['numbers']) && isset($_POST['find']) && isset($_POST['position'
     echo 'Please enter a correct data!';
 }
 
-?>
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    SYMBOLS: <input type="text" name="numbers" value=12345>
-    <br>
-    FIND : <input type="text" name="find" value=123>
-    <br>
-    POSITION : <input type="text" name="position" value=0>
-    <br>
-    <input type="submit" name="submit" value="Submit">
-    <input type="reset" name="reset" value="Reset">
-</form>
+include './forms/hw_4_1_7.html';
 
-
-//--------------------------------------------------------------------------------------------------------------------//
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    <input type="submit" name="reset" value="RESET WHOLE FORM">
-</form>
-//--------------------------------------------------------------------------------------------------------------------//
-
-
-<?php
 echo '<h3>Task 8 True or false? </h3><br>';
 
 if (isset($_POST['radio'])) {
-    if ($_POST['radio'] == "true") {
+    if ($_POST['radio'] == 'true') {
         echo 'RIGHT!';
     } else {
         echo 'WRONG!';
     }
 
-    $true_false = ($_POST['radio'] == "true") ? 'RIGHT!' : 'WRONG!';
+    $true_false = ($_POST['radio'] == 'true') ? 'RIGHT!' : 'WRONG!';
     echo $true_false;
 } else {
     echo 'Please enter a correct data!';
 }
 
-?>
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    TRUE: <input type="radio" name="radio" value="true" checked>
-    <br>
-    FALSE : <input type="radio" name="radio" value="false">
-    <br>
-    <input type="submit" name="submit" value="Submit">
-    <input type="reset" name="reset" value="Reset">
-</form>
+include './forms/hw_4_1_8.html';
 
-
-//--------------------------------------------------------------------------------------------------------------------//
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    <input type="submit" name="reset" value="RESET WHOLE FORM">
-</form>
-//--------------------------------------------------------------------------------------------------------------------//
-
-
-<?php
 echo '<h3>Task 9 Ru or Eng? </h3><br>';
 
 if (isset($_POST['lng'])) {
     $en = ['Mn', 'Tu', 'Wd', 'Tr', 'Fr', 'Sa', 'Su'];
     $ru = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Нд'];
 
-    if ($_POST['lng'] == "ru") {
-        echo '<pre>';
-        print_r($ru);
-        echo '</pre>';
+    if ($_POST['lng'] == 'ru') {
+        dd($ru);
     } else {
-        echo '<pre>';
-        print_r($en);
-        echo '</pre>';
+        dd($en);
     }
 
     echo '<br>';
 
-    $ru_eng = ($_POST['lng'] == "ru") ? $ru : $en;
-    echo '<pre>';
-    print_r($ru_eng);
-    echo '</pre>';
+    $ru_eng = ($_POST['lng'] == 'ru') ? $ru : $en;
+
+    dd($ru_eng);
+
 } else {
     echo 'Please enter a correct data!';
 }
 
-?>
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    RU: <input type="radio" name="lng" value="ru" checked>
-    <br>
-    ENG : <input type="radio" name="lng" value="ru">
-    <br>
-    <input type="submit" name="submit" value="Submit">
-    <input type="reset" name="reset" value="Reset">
-</form>
+include './forms/hw_4_1_9.html';
 
-
-//--------------------------------------------------------------------------------------------------------------------//
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    <input type="submit" name="reset" value="RESET WHOLE FORM">
-</form>
-//--------------------------------------------------------------------------------------------------------------------//
-
-
-<?php
 echo '<h3>Task 10 What a quarter of the clock? </h3><br>';
 
 if (isset($_POST['clock']) && $_POST['clock'] >= 0 && $_POST['clock'] <= 59) {
@@ -368,18 +207,4 @@ if (isset($_POST['clock']) && $_POST['clock'] >= 0 && $_POST['clock'] <= 59) {
 } else {
     echo 'Please enter a correct data!';
 }
-
-?>
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    CLOCK: <input type="text" name="clock" value="30">
-    <br>
-    <input type="submit" name="submit" value="Submit">
-    <input type="reset" name="reset" value="Reset">
-</form>
-
-
-//--------------------------------------------------------------------------------------------------------------------//
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-    <input type="submit" name="reset" value="RESET WHOLE FORM">
-</form>
-//--------------------------------------------------------------------------------------------------------------------//
+include './forms/hw_4_1_10.html';

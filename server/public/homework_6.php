@@ -2,10 +2,21 @@
 echo '<h1>Homework 6</h1><br>';
 echo '<a href="index.php">Home</a><br>';
 
-echo "Task1 -----------------------------------------------------------------------------<br>";
+/**
+ * @param array $dd
+ * @return boolean
+ */
+function dd(array $dd):boolean
+{
+    echo '<pre>';
+    print_r($dd);
+    echo '</pre>';
+    return true;
+}
 
-$minMax = function ($one, $two, $three) {
+echo 'Task1 -----------------------------------------------------------------------------<br>';
 
+$minMax = function (integer $one, integer $two, integer $three) : array {
     $max = 0;
     $min = 0;
     $arrayMaxMin = [];
@@ -26,23 +37,28 @@ $minMax = function ($one, $two, $three) {
         $min = $three;
     }
 
-    $arrayMaxMin ['min'] = $min;
+    $arrayMaxMin['min'] = $min;
 
-    $arrayMaxMin ['max'] = $max;
+    $arrayMaxMin['max'] = $max;
 
     return $arrayMaxMin;
 };
 
-echo '<pre>';
-print_r($minMax(1, 2, 3));
-echo '</pre>';
+dd($minMax(1, 2, 3));
 
 
 //---------------------------------------------------
 
 
-function minMax($one, $two, $three, $fn) {
-
+/**
+ * @param integer $one
+ * @param integer $two
+ * @param integer $three
+ * @param string  $fn
+ * @return array
+ */
+function minMax($one, $two, $three, $fn):array
+{
     $max = 0;
     $min = 0;
     $arrayMaxMin = [];
@@ -63,20 +79,19 @@ function minMax($one, $two, $three, $fn) {
         $min = $three;
     }
 
-    $arrayMaxMin ['min'] = $min;
+    $arrayMaxMin['min'] = $min;
 
-    $arrayMaxMin ['max'] = $max;
+    $arrayMaxMin['max'] = $max;
 
-    $arrayMaxMin ['sum'] = $fn($min, $max);
+    $arrayMaxMin['sum'] = $fn($min, $max);
 
     return $arrayMaxMin;
 };
-echo '<pre>';
-print_r(minMax(1, 2, 3, fn($a, $b) => $a+$b));
-echo '</pre>';
+
+dd(minMax(1, 2, 3, fn($a, $b) => $a + $b));
 
 
-echo "Task2 -----------------------------------------------------------------------------<br>";
+echo 'Task2 -----------------------------------------------------------------------------<br>';
 
 $countAria = function ($a, $b) {
     return $a * $b;
@@ -88,26 +103,26 @@ echo 'Aria = ' . $countAria(4, 8) . '<br>';
 
 $countAria = fn($a, $b) => $a * $b;
 
-echo "Aria = " . $countAria(5, 9) . '<br>';
+echo 'Aria = ' . $countAria(5, 9) . '<br>';
 
 
-echo "Task3 -----------------------------------------------------------------------------<br>";
+echo 'Task3 -----------------------------------------------------------------------------<br>';
 
 
 $countHypotenuse = function ($a, $b) {
     return sqrt($a * $a + $b * $b);
 };
 
-echo "Hypotenuse = " . $countHypotenuse(4, 8) . '<br>';
+echo 'Hypotenuse = ' . $countHypotenuse(4, 8) . '<br>';
 
 //-------------------------------------------
 
 $countHypotenuse = fn($a, $b) => $a * $b;
 
-echo "Hypotenuse = " . $countHypotenuse(5, 9) . '<br>';
+echo 'Hypotenuse = ' . $countHypotenuse(5, 9) . '<br>';
 
 
-echo "Task4 -----------------------------------------------------------------------------<br>";
+echo 'Task4 -----------------------------------------------------------------------------<br>';
 
 $countPerimeter = function ($a, $b, $c, $d) {
     return $a + $b + $c + $d;
@@ -119,10 +134,10 @@ echo 'The perimeter = ' . $countPerimeter(4, 8, 9, 7) . '<br>';
 
 $countPerimeter = fn($a, $b, $c, $d) => $a + $b + $c + $d;
 
-echo "The perimeter = " . $countPerimeter(5, 9, 6, 3) . '<br>';
+echo 'The perimeter = ' . $countPerimeter(5, 9, 6, 3) . '<br>';
 
 
-echo "Task5 -----------------------------------------------------------------------------<br>";
+echo 'Task5 -----------------------------------------------------------------------------<br>';
 
 
 $countDiscriminant = function ($a, $b, $c) {
@@ -135,27 +150,30 @@ echo 'The Discriminant = ' . $countDiscriminant(4, 8, 9) . '<br>';
 
 $countDiscriminant = fn($a, $b, $c) => ($b ** 2) - (4 * $a * $c);
 
-echo "The Discriminant = " . $countDiscriminant(5, 9, 6) . '<br>';
+echo 'The Discriminant = ' . $countDiscriminant(5, 9, 6) . '<br>';
 
-echo "Task6 -----------------------------------------------------------------------------<br>";
+echo 'Task6 -----------------------------------------------------------------------------<br>';
 
 $countEven = function ($a) {
     $result = [];
     for ($i = 0; $i <= $a; $i++) {
         if ($i % 2 == 0) {
-            $result [] = $i;
+            $result[] = $i;
         }
     }
     return $result;
 };
 
-echo '<pre>';
-print_r($countEven(10));
-echo '</pre>';;
+dd($countEven(10));
 
 //-------------------------------------------
 
-function countEven($i, $fn)
+/**
+ * @param integer $i
+ * @param string  $fn
+ * @return array
+ */
+function countEven($i, $fn):array
 {
     $result = [];
     for ($j = 0; $j <= $i; $j++) {
@@ -168,30 +186,30 @@ function countEven($i, $fn)
 
 $countEven = countEven(5, fn($b) => $b % 2 == 0 ?? $b);
 
-echo '<pre>';
-print_r($countEven);
-echo '</pre>';
+dd($countEven);
 
 
-echo "Task7 -----------------------------------------------------------------------------<br>";
+echo 'Task7 -----------------------------------------------------------------------------<br>';
 
 $createOdd = function ($a) {
     $result = [];
     for ($i = 0; $i <= $a; $i++) {
         if ($i % 2 != 0) {
-            $result [] = $i;
+            $result[] = $i;
         }
     }
     return $result;
 };
 
-echo '<pre>';
-print_r($createOdd(10));
-echo '</pre>';;
-
+dd($createOdd(10));
 //-------------------------------------------
 
-function createOdd($i, $fn)
+/**
+ * @param integer $i
+ * @param string  $fn
+ * @return array
+ */
+function createOdd($i, $fn):array
 {
     $result = [];
     for ($j = 0; $j <= $i; $j++) {
@@ -204,56 +222,55 @@ function createOdd($i, $fn)
 
 $createOdd = createOdd(5, fn($b) => $b % 2 != 0 ?? $b);
 
-echo '<pre>';
-print_r($createOdd);
-echo '</pre>';
+dd($createOdd);
 
-echo "Task8 -----------------------------------------------------------------------------<br>";
+echo 'Task8 -----------------------------------------------------------------------------<br>';
 
-$findRepeating = function ($array)
-{
+$findRepeating = function ($array) {
     $rep = '';
     foreach ($array as $key1 => $item) {
         foreach ($array as $key2 => $value) {
             if ($item == $value && $key1 != $key2) {
-                $rep .= "Here is a repeating $item = $value!<br>";
+                $rep .= 'Here is a repeating'. $item = $value.'!<br>';
             }
         }
     }
     return $rep;
 };
-$array= [44, 12, 11, 7, 44, 99, 43, 7, 69];
-echo '<pre>';
-print_r($findRepeating($array));
-echo '</pre>';
+
+$array = [44, 12, 11, 7, 44, 99, 43, 7, 69];
+dd($findRepeating($array));
 
 //--------------------------------------------------------------
 
-
-function findRepeating($arr, $fn){
-    
+/**
+ * @param array  $arr
+ * @param string $fn
+ * @return string
+ */
+function findRepeating($arr, $fn):string
+{
     $rep = '';
-    
+
     foreach ($arr as $key1 => $item) {
         foreach ($arr as $key2 => $value) {
             if ($item == $value && $key1 != $key2) {
                 $rep .= $fn($value);
-                
             }
         }
     }
     return $rep;
 }
-$array= [44, 12, 11, 7, 44, 99, 43, 7, 69];
-$findRep = $findRepeating($array, fn($value)=> $value = "Here is a repeating $value!<br>");
-echo '<pre>';
-print_r($findRep);
-echo '</pre>';
 
-echo "Task9 -----------------------------------------------------------------------------<br>";
+$array = [44, 12, 11, 7, 44, 99, 43, 7, 69];
+$findRep = $findRepeating($array, fn($value) => $value = 'Here is a repeating' . $value . '!<br>');
 
-$showSortedArray = function ($arr, $sort = 'asc'){
-    if ($sort!='asc'){
+dd($findRep);
+
+echo 'Task9 -----------------------------------------------------------------------------<br>';
+
+$showSortedArray = function ($arr, $sort = 'asc') {
+    if ($sort != 'asc') {
         $i = 0;
         foreach ($arr as $array) {
             $j = 0;
@@ -272,7 +289,7 @@ $showSortedArray = function ($arr, $sort = 'asc'){
             }
             $i++;
         }
-    }else{
+    } else {
         $i = 0;
         foreach ($arr as $array) {
             $j = 0;
@@ -286,26 +303,30 @@ $showSortedArray = function ($arr, $sort = 'asc'){
                     $arr[$j] = $arr[$i];
                     $arr[$i] = $next;
                 }
-
                 $j++;
             }
             $i++;
         }
     }
 
-    return($arr);
+    return ($arr);
 };
 
 $array = [44, 12, 11, 7, 1, 99, 43, 5, 69];
-echo '<pre>';
-print_r($showSortedArray($array));
-echo '</pre>';
+
+dd($showSortedArray($array));
 
 //------------------------------------------------------
 
-
-function showSortedArray ($arr, $sort = 'asc', $fn){
-    if ($sort!='asc'){
+/**
+ * @param array  $arr
+ * @param string $fn
+ * @param string $sort
+ * @return array
+ */
+function showSortedArray(array $arr, $fn, $sort = 'asc'):array
+{
+    if ($sort != 'asc') {
         $i = 0;
         foreach ($arr as $array) {
             $j = 0;
@@ -324,7 +345,7 @@ function showSortedArray ($arr, $sort = 'asc', $fn){
             }
             $fn($i);
         }
-    }else{
+    } else {
         $i = 0;
         foreach ($arr as $array) {
             $j = 0;
@@ -344,11 +365,8 @@ function showSortedArray ($arr, $sort = 'asc', $fn){
             $fn($i);
         }
     }
-
-    return($arr);
+    return ($arr);
 };
 
 $array = [44, 12, 11, 7, 1, 99, 43, 5, 69];
-echo '<pre>';
-print_r($showSortedArray($array, "dsc", fn($a) => $a++));
-echo '</pre>';
+dd($showSortedArray($array, 'dsc', fn($a) => $a++));

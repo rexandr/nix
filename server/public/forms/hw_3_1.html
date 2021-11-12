@@ -1,0 +1,14 @@
+<form name="task1" action="homework_3.php" method="post">
+  <input type="text" name="user" value="user">
+  <br>
+  <textarea name="comment" cols="30" rows="10"><?php
+    if (isset($_REQUEST['comment']) && $_REQUEST['comment']) {
+        echo trim($_REQUEST['comment']);
+    } else {
+        echo trim('Enter your comment');
+    } ?>
+    </textarea>
+  <br>
+  <input type="submit" name="submit" value="Submit">
+  <input type="reset" name="reset" value="RESET">
+</form>

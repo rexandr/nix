@@ -1,7 +1,7 @@
 <?php
 echo '<h1>Homework 4_2</h1><br>';
 echo '<a href="index.php">Home</a>';
-
+//________________________________________________________________________________________
 echo '<h3>Task 1 To reverse array with string data.</h3>';
 echo '<h6 align="center">______WHILE______.</h6>';
 
@@ -22,12 +22,8 @@ while (!empty($arr[$i])) {
     $i--;
 }
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h6 align="center">______DO WHILE______.</h6>';
@@ -47,12 +43,8 @@ do {
     $i--;
 } while (!empty($arr[$i]));
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h6 align="center">______FOR______.</h6>';
@@ -72,12 +64,8 @@ for ($j = 0; $arr[$i] != null; $j++) {
     $i--;
 }
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 
@@ -98,12 +86,8 @@ foreach ($arr as $value) {
     $i--;
 }
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h3>Task 2 To reverse array with number data.</h3>';
@@ -126,12 +110,8 @@ while (!empty($arr[$i])) {
     $i--;
 }
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h6 align="center">______DO WHILE______.</h6>';
@@ -151,12 +131,8 @@ do {
     $i--;
 } while (!empty($arr[$i]));
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h6 align="center">______FOR______.</h6>';
@@ -175,12 +151,8 @@ for ($j = 0; $arr[$i] != null; $j++) {
     $i--;
 }
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 
@@ -201,12 +173,8 @@ foreach ($arr as $value) {
     $i--;
 }
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h3>Task 3 To reverse string.</h3>';
@@ -459,12 +427,8 @@ while (!empty($arr[$i])) {
     $i++;
 }
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h6 align="center">______DO WHILE______.</h6>';
@@ -478,13 +442,8 @@ do {
     $i++;
 } while (!empty($arr[$i]));
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
-//___________________________________________________________________________________________________________________//
+dd($reverse);
+dd($arr);
 
 echo '<h6 align="center">______FOR______.</h6>';
 
@@ -497,12 +456,8 @@ for ($j = 0; $arr[$i] != null; $j++) {
     $i++;
 }
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h6 align="center">______FOREACH______.</h6>';
@@ -516,12 +471,8 @@ foreach ($arr as $value) {
     $i++;
 }
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 
@@ -538,12 +489,8 @@ while (!empty($arr[$i])) {
     $i++;
 }
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h6 align="center">______DO WHILE______.</h6>';
@@ -557,12 +504,8 @@ do {
     $i++;
 } while (!empty($arr[$i]));
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h6 align="center">______FOR______.</h6>';
@@ -576,12 +519,8 @@ for ($j = 0; $arr[$i] != null; $j++) {
     $i++;
 }
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h6 align="center">______FOREACH______.</h6>';
@@ -595,12 +534,8 @@ foreach ($arr as $value) {
     $i++;
 }
 
-echo '<pre>';
-print_r($reverse);
-echo '</pre>';
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($reverse);
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 
@@ -701,9 +636,7 @@ echo '<h6 align="center">______WHILE______.</h6>';
 
 $arr = [44, 12, 11, 7, 1, 99, 43, 5, 69];
 
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($arr);
 
 $i = 0;
 
@@ -723,18 +656,14 @@ while ((!empty($arr[$i]))) {
     $j = $i + 1;
 }
 
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h6 align="center">______DO WHILE______.</h6>';
 
 $arr = [44, 12, 11, 7, 1, 99, 43, 5, 69];
 
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($arr);
 
 $i = 0;
 
@@ -756,18 +685,12 @@ do {
 
 } while ((!empty($arr[$i])));
 
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h6 align="center">______FOR______.</h6>';
 
 $arr = [44, 12, 11, 7, 1, 99, 43, 5, 69];
-
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
 
 for ($i = 0; (!empty($arr[$i])); $j++) {
     for ($j = $i + 1; (!empty($arr[$j])); $j++) {
@@ -781,18 +704,15 @@ for ($i = 0; (!empty($arr[$i])); $j++) {
     $i++;
     $j = $i + 1;
 }
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+
+dd($arr);
 //___________________________________________________________________________________________________________________//
 
 echo '<h6 align="center">______FOREACH______.</h6>';
 
 $arr = [44, 12, 11, 7, 1, 99, 43, 5, 69];
 
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($arr);
 
 $i = 0;
 foreach ($arr as $array) {
@@ -813,7 +733,5 @@ foreach ($arr as $array) {
     $i++;
 }
 
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+dd($arr);
 //___________________________________________________________________________________________________________________//
